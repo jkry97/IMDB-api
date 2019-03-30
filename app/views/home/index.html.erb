@@ -1,0 +1,11 @@
+<%#= @result.inspect %>
+<% if @result["Response"] == "True"  %>
+    <div class="card" style="width: 18rem;">
+    <img src="<%= @result["Poster"]%>" class="card-img-top" alt="...">
+    <div class="card-body">
+        <p class="card-text"><%= @result["Plot"]%></p>
+    </div>
+    </div>    
+<% else %>
+<h5><%= @result["Error"]%></5>
+<% end %>
